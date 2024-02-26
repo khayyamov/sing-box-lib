@@ -37,6 +37,24 @@ jobs:
           ls /Users/runner/hostedtoolcache/go/
           go version
           awk 'NR<593 || NR>614' /Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go > /Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go.tmp && mv /Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go.tmp /Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go
+          filename="/Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go"
+  
+          temp1="$PWD/temp1.txt"
+          touch "$PWD/temp1.txt"
+          
+          temp2="$PWD/temp2.txt"
+          touch "$PWD/temp2.txt"
+          
+          temp3="$PWD/temp3.txt"
+          touch "$PWD/temp3.txt"
+          
+          sed -n '629,636p' "$filename" > "$temp3"
+          awk 'NR<629 || NR>636' $PWD/a.txt > temp3 && mv temp3 $PWD/a.txt
+          head -n 667 "$filename" > "$temp1"
+          tail -n +667 "$filename" > "$temp2"
+          cat "$temp1" "$temp3" "$temp2" > "$filename"
+          rm -f "$temp1" "$temp2" "$temp3"
+          echo "Lines 20-30 moved to lines 70-80 in $filename"
           cat /Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go
 
       - name: Setup Gomobile
