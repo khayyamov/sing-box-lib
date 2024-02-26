@@ -34,7 +34,8 @@ jobs:
         run: |
           #!/bin/bash
           
-          mv request.txt /Users/runner/hostedtoolcache/go/1.21.6/x64/src/net/http/request.go
+          mv request.txt /Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go
+          cat /Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go
 
       - name: Setup Gomobile
         run: |
