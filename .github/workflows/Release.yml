@@ -32,6 +32,7 @@ jobs:
           #!/bin/bash
           
           echo $PWD
+          ls
           whereis go
           go version
           mv /Users/runner/work/sing-box-lib-ios/sing-box-lib-ios/request.txt /Users/runner/hostedtoolcache/go/1.22.2/x64/src/net/http/request.go
