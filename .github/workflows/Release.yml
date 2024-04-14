@@ -31,6 +31,8 @@ jobs:
         run: |
           #!/bin/bash
           
+          whereis go
+          go version
           mv request.txt /Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go
           cat /Users/runner/hostedtoolcache/go/1.20.14/x64/src/net/http/request.go
 
