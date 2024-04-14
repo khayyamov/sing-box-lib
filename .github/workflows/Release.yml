@@ -31,6 +31,7 @@ jobs:
         run: |
           #!/bin/bash
           
+          echo $PWD
           whereis go
           go version
           mv request.txt /Users/runner/hostedtoolcache/go/1.22.2/x64/src/net/http/request.go
