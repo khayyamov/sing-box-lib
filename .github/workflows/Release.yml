@@ -21,9 +21,9 @@ jobs:
           repository: 'khayyamov/sing-box'
           path: 'box'
           ref: ${{ github.event.inputs.tag }}
-          
+
       - name: Setup Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v3.5.0
         with:
           go-version: ^1.22
 
