@@ -38,8 +38,8 @@ jobs:
           ls box
           whereis go
           go version
-          mv /Users/runner/work/xray-singbox-xframework-ios/xray-singbox-xframework-ios/box/request.txt /Users/runner/hostedtoolcache/go/1.22.2/x64/src/net/http/request.go
-          cat /Users/runner/hostedtoolcache/go/1.22.2/x64/src/net/http/request.go
+          mv request.txt request.go
+          cat request.go
 
       - name: Setup Gomobile
         run: |
