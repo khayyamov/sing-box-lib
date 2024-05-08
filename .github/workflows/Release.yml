@@ -16,9 +16,12 @@ jobs:
   release:
     runs-on: macOS-12
     steps:
+
+      - uses: actions/checkout@v3
+
       - uses: actions/checkout@v3
         with:
-          repository: 'khayyamov/sing-box'
+          repository: 'SagerNet/sing-box'
           path: 'box'
           ref: ${{ github.event.inputs.tag }}
 
